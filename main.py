@@ -35,7 +35,20 @@ class Timer(ttk.Frame):
         self.decrement_time()
 
     def decrement_time(self):
-        pass
+        current_time = self.current_time.get()
+
+        if self.timer_running and current_time != "00:00":
+            minutes, seconds = current_time.split(":")
+
+            if int(seconds) > 0:
+                seconds = int(seconds) - 1
+                minutes = int(minutes)
+            else:
+                seconds = 59
+                minutes = int(minutes) - 1
+
+            self.current_time.set(f"{minutes:02d}:{seconds:02d}")
+            self.after(1000, self.decrement_time)
 
 app = PomodoroTimer()
 app.mainloop()
