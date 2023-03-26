@@ -135,7 +135,6 @@ class Timer(ttk.Frame):
 
             self._timer_decrement_job = self.after(1000, self.decrement_time)
 
-            #test
 
 
 
