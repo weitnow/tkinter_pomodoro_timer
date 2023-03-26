@@ -1,3 +1,4 @@
 # tkinter_pomodoro_timer
 
-playing with tkinter ;)
+![](https://github.com/weitnow/tkinter_pomodoro_timer/Preview.png)
+
